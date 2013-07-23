@@ -2,3 +2,26 @@
 layout: default
 title: Couch Surfing Services
 ---
+
+<div id="home">
+	<h3>Current Status of Services</h3>
+	<p>Check the availability of all the services offered by Couch-Surfing all in one place!</p>
+
+	<div id="service_list">
+		<table>
+			<thead>
+
+			</thead>
+
+			<tbody>
+				{% for page in site.pages %}
+					{% if page.title == "Couch Surfing Services" %}
+					{% else %}
+						<p><span>{{ page.title }}</span></p>
+					{% endif %}
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+		

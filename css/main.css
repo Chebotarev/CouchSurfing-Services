@@ -15,9 +15,18 @@ body {
 	position: relative;
 }
 
+#service_list {
+	border: 2px solid black;
+}
 
 div {
 	border-radius: 5px;
+}
+
+#home {
+	position: relative;
+	margin: 20px;
+	top: 20px;
 }
 
 .header {
@@ -42,7 +51,7 @@ div {
 	height: 56px;
 	left: 0px;
 	line-height: 20px;
-	min-width: 960px;
+	min-width: 600px;
 	position: fixed;
 	right: 0px;
 	top: 0px;
