@@ -4,24 +4,36 @@ title: Couch Surfing Services
 ---
 
 <div id="home">
-	<h3>Current Status of Services</h3>
-	<p>Check the availability of all the services offered by Couch-Surfing all in one place!</p>
+  <div class="ribbon_box">
+    <h2 class="ribbon">
+      <span class="ribbon-content">Service Status</span>
+    </h2>
+  </div>
+  <p style="float:left; clear: left;"><strong>Check the availability of all the services offered by Couch-Surfing all in one place!</strong></p>
 
-	<div id="service_list">
-		<table>
-			<thead>
+  <div id="service_list">
+    <table id="service_table">
+      <thead>
+        <tr>
+          <th class="ColTitle">Status</th>
+          <th class="ColTitle">Service Name</th>
+	  <th class="ColTitle">Extra Stuff</th>
+        </tr>
+      </thead>
 
-			</thead>
-
-			<tbody>
-				{% for page in site.pages %}
-					{% if page.title == "Couch Surfing Services" %}
-					{% else %}
-						<p><span>{{ page.title }}</span></p>
-					{% endif %}
-				{% endfor %}
-			</tbody>
-		</table>
-	</div>
+      <tbody>
+        {% for page in site.pages %}
+	  {% if page.title == "Couch Surfing Services" %}
+	  {% else %}
+	    <tr class="{% cycle 'std_bg', 'alt_bg' %}">
+	      <td><img class="status_img" src="images/green_check.png"></td>
+	      <td><a id="ServiceLinks" href="{{ page.url }}"><strong>{{ page.title }}</strong><a></td>
+	      <td>Information</td>
+	    </tr>
+	  {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 		

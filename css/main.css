@@ -10,6 +10,11 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#ServiceLinks {
+	text-decoration: none;
+	color: rgb(33, 131, 194);
+}
+
 #Site_Title {
 	font-size: 20px;
 	position: relative;
@@ -17,6 +22,40 @@ body {
 
 #service_list {
 	border: 2px solid black;
+	clear: both;
+}
+
+#service_table {
+	cellpadding: 2;
+	cellspacing: 0;
+	width: 100%;
+	align: center;
+}
+
+td {
+	padding: 10px;
+	height: 30px;
+}
+
+.ColTitle {
+	padding: 10px 10px 0px 10px;
+	vertical-align: middle;
+	font-size: 13px;
+	height: 16px;
+	color: rgb(128, 128, 128);
+	text-align: left;
+}
+
+.status_img {
+	height: 30px;
+}
+
+.std_bg {
+	background-color: rgb(244, 244, 244);
+}
+
+.alt_bg {
+	background-color: #CCCCCC;
 }
 
 div {
@@ -59,6 +98,82 @@ div {
 	text-align: center;
 }
 
+.ribbon-content {
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgb(102, 102, 102);
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 5px;
+	color: rgb(255, 255, 255);
+	display: inline;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	height: auto;
+	margin-left: -12px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	position: relative;
+	text-align: left;
+	width: auto;
+
+}
+
+.ribbon {
+	color: rgb(68, 68, 68);
+	display: block;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	height: 30px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: left;
+	width: 192px;
+
+}
+
+.ribbon_box {
+	color: rgb(68, 68, 68);
+	display: block;
+	float: left;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	font-size: 14px;
+	height: 30px;
+	text-align: left;
+	width: 192px;
+	margin-left: -15px;
+	clear: right;
+}
+
+.ribbon-content:before {
+	content: "";
+	left: 0px;
+	position: absolute;
+	bottom: -7px;
+	width: 7px;
+	height: 7px;
+	background: url(/images/ribbon-corner.png) no-repeat;
+}
+
 img {
 	float: left;
 	margin: 10px;
@@ -73,7 +188,7 @@ img {
 	margin-top: 65px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #F8F7F3;
+	background-color: rgb(255, 255, 255);
 }
 
 
