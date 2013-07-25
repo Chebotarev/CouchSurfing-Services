@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Couch Surfing Services
+title: Couchsurfing - Services
 ---
 
 <div id="home">
@@ -17,18 +17,25 @@ title: Couch Surfing Services
         <tr>
           <th class="ColTitle">Status</th>
           <th class="ColTitle">Service Name</th>
-	  <th class="ColTitle">Extra Stuff</th>
+	  <th class="ColTitle">Description</th>
         </tr>
       </thead>
 
       <tbody>
         {% for page in site.pages %}
-	  {% if page.title == "Couch Surfing Services" %}
+	  {% if page.title == "Couchsurfing - Services" %}
 	  {% else %}
 	    <tr class="{% cycle 'std_bg', 'alt_bg' %}">
-	      <td><img class="status_img" src="images/green_check.png"></td>
+	      {% case page.status %}
+		{% when "Active" %}
+	          <td><img class="status_img" src="images/green_check.png"></td>
+	        {% when "Inactive" %}
+	          <td><img class="status_img" src="images/red_x.png"></td>
+	        {% else %}
+		  <td><img class="status_img" id="UnknownStatus" src="images/blue_ques.png"></td>
+	      {% endcase %}
 	      <td><a id="ServiceLinks" href="{{ page.url }}"><strong>{{ page.title }}</strong><a></td>
-	      <td>Information</td>
+	      <td>{{ page.description }}</td> 
 	    </tr>
 	  {% endif %}
         {% endfor %}
