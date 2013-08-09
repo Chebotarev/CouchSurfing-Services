@@ -14,15 +14,26 @@
     
   <body>
     <div class="header">
-      <a href="https://www.couchsurfing.org" title='Go to homepage'><img src="{{ site.url }}/images/logo-small.png"></a>
-      <div id="Site_Title">
-	<h3>Couch-Surfing Services Dashboard</h3>
+      <a href="https://www.couchsurfing.org" title='Go to homepage'><span><img src="{{ site.url }}/images/logo-small.png"></span></a>
+      <span>
+	<h2>Couch-Surfing Services Dashboard</h2>
+      </span>
+      <a href="/"><span class="button" id="last_but">Home</span></a>
+      <a href="/login/index.html"><span class="button" id="first_but">Login</span></a>
+    </div>
+    
+    <div class="content">
+      <div class="ribbon_box">
+        <h2 class="ribbon">
+          <span class="ribbon-content"> {{ page.title }}</span>
+        </h2>
       </div>
+      
+      <div id="home">
+      {{ content }}
+      </div>
+
     </div>
 
-    <div class="content">
-      {{ content }}
-    </div>
-  
   </body>
 </html>

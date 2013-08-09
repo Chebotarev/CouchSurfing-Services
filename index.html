@@ -1,15 +1,9 @@
 ---
 layout: default
-title: Couchsurfing - Services
+title: Service Status
 ---
 
-<div id="home">
-  <div class="ribbon_box">
-    <h2 class="ribbon">
-      <span class="ribbon-content">Service Status</span>
-    </h2>
-  </div>
-  <p style="float:left; clear: left;"><strong>Check the availability of all the services offered by Couch-Surfing all in one place!</strong></p>
+  <p><strong>Check the availability of all the services offered by Couch Surfing, all in one place!</strong></p>
 
   <div id="service_list">
     <table id="service_table">
@@ -17,30 +11,77 @@ title: Couchsurfing - Services
         <tr>
           <th class="ColTitle">Status</th>
           <th class="ColTitle">Service Name</th>
-	  <th class="ColTitle">Description</th>
+          <th class="ColTitle">Description</th>
+	  <th class="ColTitle">Link</th>
         </tr>
       </thead>
-
+    
       <tbody>
         {% for page in site.pages %}
-	  {% if page.title == "Couchsurfing - Services" %}
-	  {% else %}
-	    <tr class="{% cycle 'std_bg', 'alt_bg' %}">
-	      {% case page.status %}
-		{% when "Active" %}
-	          <td><img class="status_img" src="images/green_check.png"></td>
-	        {% when "Inactive" %}
-	          <td><img class="status_img" src="images/red_x.png"></td>
-	        {% else %}
-		  <td><img class="status_img" id="UnknownStatus" src="images/blue_ques.png"></td>
-	      {% endcase %}
-	      <td><a id="ServiceLinks" href="{{ page.url }}"><strong>{{ page.title }}</strong><a></td>
-	      <td>{{ page.description }}</td> 
-	    </tr>
-	  {% endif %}
+          {% case page.title %}
+            {% when "Service Status" %}
+            {% else %}
+              <tr class="{% cycle 'std_bg', 'alt_bg' %}">
+                {% case page.status %}
+                  {% when "Active" %}
+                    <td class="status_box">
+                        <img class="status_img" src="images/green_check.png">
+			<p class="status_pop">{{ page.status }}</p>
+                    </td>
+                  {% when "Inactive" %}
+                    <td class="status_box">
+		      <img class="status_img" src="images/red_x.png">
+		      <p class="status_pop">{{ page.status }}</p>
+		    </td>
+                  {% when "Under Maintenance" %}
+                    <td class="status_box">
+		      <img class="status_img" src="images/yellow_exclamation.png">
+		      <p class="status_pop">{{ page.status }}</p>
+		    </td>
+                  {% else %}
+                    <td class ="status_box">
+		      <img class="status_img" id="UnknownStatus" src="images/blue_ques.png">
+		      {% assign status_length = page.status | size %}
+		      {% if status_length < 20 %}
+		        <p class="status_pop">{{ page.status }}</p>
+		      {% else %}
+			<p class="status_pop">{{ page.status | truncate: 20 }}...</p>
+		      {% endif %}
+		    </td>
+                    
+	          {% endcase %}
+                <td id="ServeLinkBox">
+		  <a id="ServiceLinks" href="{{ page.url }}"><strong>
+		    {% assign title_length = page.title | size %}
+		    {% if title_length < 20 %}
+		      {{ page.title }}
+		    {% else %}
+		      {{ page.title | truncate: 20 }}...
+		    {% endif %} 
+		  </strong><a>
+		</td>
+                
+		<td id="DescBox">
+		  {% assign des_length = page.description | size %}
+		  {% if des_length < 30 %}
+		    {{ page.description }}
+		  {% else %}
+		    {{ page.description | truncate: 30 }}...
+		  {% endif %} 
+		</td>
+
+	        <td id="LinkBox">
+		  {% if page.link == "none" %}
+		    <a href="https://www.couchsurfing.org" title="Couch Surfing Home"><img class="status_img" src="images/black_link.png"></a>
+		  {% else %}
+		    <a href="{{ page.link }}" title="{{ page.link }}"><img class="status_img" src="images/black_link.png"></a>
+		  {% endif %} 
+		</td>
+              </tr>
+          {% endcase %}
         {% endfor %}
       </tbody>
     </table>
   </div>
-</div>
+
 		
