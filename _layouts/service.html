@@ -2,7 +2,17 @@
 layout: default
 ---
 
-<h2>{{ page.status }}</h2>
-<p>{{ page.description }}</p>
+<h2>Status:</h2>
+<p>{{ page.status }}</p>
 
-<a href="/">Go Home</a>
+<h2>Brief Description:</h2>
+<div style="border: 2px solid black; text-align: center;">
+  <p style="display: in-line block;">{{ page.description }}</p>
+</div>
+
+<h2>Service Home Page:</h2>
+  {% if page.link == "none" %}
+    <p>No specific link available!</p>
+  {% else %} 
+    <a href="{{ page.link }}"><p>{{ page.link }}</p></a>
+  {% endif %}
