@@ -51,7 +51,7 @@ title: Service Status
                     
 	          {% endcase %}
                 <td id="ServeLinkBox">
-		  <a id="ServiceLinks" href="{{ page.baseurl }}"><strong>
+		  <a id="ServiceLinks" href="{{ site.baseurl }}/{{ page.url }}"><strong>
 		    {% assign title_length = page.title | size %}
 		    {% if title_length < 32 %}
 		      {{ page.title }}
