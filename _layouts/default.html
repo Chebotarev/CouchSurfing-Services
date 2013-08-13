@@ -14,19 +14,19 @@
     
   <body>
     <div class="header">
-      
-      <a href="https://www.couchsurfing.org" title='Go to homepage'>
-        <span><img src="{{ site.url }}/images/logo-small.png"></span>
-      </a>
+      <div class="header_content">
+        <div><a href="https://www.couchsurfing.org" title='Go to homepage'>
+          <img src="{{ site.url }}/images/logo-small.png">
+        </a></div>
  
-      <span>
-	<h2>Couch-Surfing Services Dashboard</h2>
-      </span>
+        <div id="HeadTitle">
+          <strong>Couchsurfing Services Dashboard</strong>
+        </div>
 
-      <a href="/"><span class="button" id="last_but">Home</span></a>
-      <a href="/login/index.html"><span class="button" id="first_but">Login</span></a>
+        <a href="/"><div class="button">Home</div></a>
+      </div>
     </div>
-    
+
     <div class="content">
       <div class="ribbon_box">
         <h2 class="ribbon">
@@ -35,10 +35,19 @@
       </div>
       
       <div id="home">
-      {{ content }}
+        {{ content }}
       </div>
 
     </div>
+
+  <footer>
+    <div id="support">
+      Please visit our <a href="https://support.couchsurfing.org/anonymous_requests/new">Support Center</a> or follow <a href="https://twitter.com/cs_help">@cs_help</a> on Twitter if you need help or have any questions
+    </div>
+    <div id="copyright">
+      © 1999 - 2013&nbsp;&nbsp;&nbsp;&nbsp;Couchsurfing International, Inc. A socially responsible, Certified B Corporation
+    </div>
+  </footer>
 
   </body>
 </html>
