@@ -1,8 +1,76 @@
 /*****************************************************************************/
 /*
-/* Default Layout
+/* General Formatting
 /*
 /*****************************************************************************/
+
+body {
+	background-color: rgb(238, 235, 225);
+	color: rgb(51, 51, 51);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(33, 131, 194);
+}
+
+a:hover {
+	color: green;
+}
+
+div {
+	border-radius: 5px;
+}
+
+img {
+	float: left;
+	margin: 10px;
+
+}
+
+/*********************/
+/*	IDs          */
+/*********************/
+
+#home {
+	position: relative;
+	margin: 20px;
+	top: 20px;
+	clear: left;
+}
+
+/********************/
+/*	Classes     */
+/********************/
+
+.content {
+	-webkit-box-shadow: rgb(204, 203, 194) 0px 1px 5px 0px;
+	width: 900px;
+	height: auto;
+	display: block;
+	margin-top: 65px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 50px;
+	background-color: rgb(255, 255, 255);
+}
+
+
+/*****************************************************************************/
+/*
+/* Main Services Table
+/*
+/*****************************************************************************/
+
+td {
+	padding: 10px;
+	height: 30px;
+}
+
+/*********************/
+/*	IDs          */
+/*********************/
 
 #service_list {
 	border: 2px solid black;
@@ -14,26 +82,23 @@
 	align: center;
 }
 
-.ServiceText {
-	word-wrap: break-word;
+#ServeLinkBox {
+	width: 32%;
 }
 
-/*****************************************************************************/
-/*
-/* Service Layout
-/*
-/*****************************************************************************/
-
-body {
-	background-color: rgb(238, 235, 225);
-	color: rgb(51, 51, 51);
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+#DescBox {
+	width: 30%;
 }
 
-td {
-	padding: 10px;
-	height: 30px;
+#LinkBox {
+	width: 8%;
 }
+
+/********************/
+/*	Classes     */
+/********************/
+
+
 
 .ColTitle {
 	padding: 10px 10px 0px 10px;
@@ -62,17 +127,7 @@ td {
 	visibility: visible;
 }
 
-#ServeLinkBox {
-	width: 32%;
-}
 
-#DescBox {
-	width: 30%;
-}
-
-#LinkBox {
-	width: 8%;
-}
 
 .std_bg {
 	background-color: rgb(244, 244, 244);
@@ -82,25 +137,32 @@ td {
 	background-color: #CCCCCC;
 }
 
-a {
-	text-decoration: none;
-	color: rgb(33, 131, 194);
+
+
+/*****************************************************************************/
+/*
+/* Header Formatting
+/*
+/*****************************************************************************/
+
+
+/*********************/
+/*	IDs          */
+/*********************/
+
+#HeadTitle {
+	font-size: 20px;
+	margin-bottom: 20px;
+	float: center;
+	padding-right: 20px;
+	padding-left: -40px;
 }
 
-a:hover {
-	color: green;
-}
 
-div {
-	border-radius: 5px;
-}
+/********************/
+/*	Classes     */
+/********************/
 
-#home {
-	position: relative;
-	margin: 20px;
-	top: 20px;
-	clear: left;
-}
 
 .header {
 	-webkit-background-clip: border-box;
@@ -142,13 +204,7 @@ div {
 	padding: 5px 15px 5px 15px;
 }
 
-#HeadTitle {
-	font-size: 20px;
-	margin-bottom: 20px;
-	float: center;
-	padding-right: 20px;
-	padding-left: -40px;
-}
+
 
 
 .button {
@@ -237,38 +293,24 @@ div {
 .ribbon-content:before {
 	content: "";
 	left: 0px;
-	position: absolute;
+	position: absolute;/Users/newuser/Documents/Website/css/main.css
 	bottom: -7px;
 	width: 7px;
 	height: 7px;
 	background: url(/images/ribbon-corner.png) no-repeat;
 }
 
-img {
-	float: left;
-	margin: 10px;
 
-}
 
 /*****************************************************************************/
 /*
-/* Service Layout
+/* Footer Formatting
 /*
 /*****************************************************************************/
 
-
-.content {
-	-webkit-box-shadow: rgb(204, 203, 194) 0px 1px 5px 0px;
-	width: 900px;
-	height: auto;
-	display: block;
-	margin-top: 65px;
-	margin-right: auto;
-	margin-left: auto;
-	padding-bottom: 50px;
-	background-color: rgb(255, 255, 255);
-}
-
+/*********************/
+/*	IDs          */
+/*********************/
 
 #copyright {
 	width: 900px;
@@ -291,3 +333,20 @@ img {
 	border-top: 1px solid #f9f9f9;
 	
 }
+
+/*****************************************************************************/
+/*
+/* Service Pages Formatting
+/*
+/*****************************************************************************/
+
+.ServiceText {
+	word-wrap: break-word;
+}
+
+/*****************************************************************************/
+/*
+/* End
+/*
+/*****************************************************************************/
+
