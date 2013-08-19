@@ -33,7 +33,7 @@ img {
 /*	IDs          */
 /*********************/
 
-#home {
+#Home {
 	position: relative;
 	margin: 20px;
 	top: 20px;
@@ -72,12 +72,12 @@ td {
 /*	IDs          */
 /*********************/
 
-#service_list {
+#ServiceList {
 	border: 2px solid black;
 	clear: both;
 }
 
-#service_table {
+#ServiceTable {
 	width: 100%;
 	align: center;
 }
@@ -100,7 +100,7 @@ td {
 
 
 
-.ColTitle {
+.col_title {
 	padding: 10px 10px 0px 10px;
 	vertical-align: middle;
 	font-size: 13px;
@@ -312,7 +312,7 @@ td {
 /*	IDs          */
 /*********************/
 
-#copyright {
+#Copyright {
 	width: 900px;
 	color: rgb(116, 113, 109);
 	font-size: 11px;
@@ -321,7 +321,7 @@ td {
 	padding: 20px 0px 20px 0px;
 }
 
-#support {
+#Support {
 	font-size: 15px;
 	width: 900px;
 	margin-right: auto;
@@ -340,7 +340,7 @@ td {
 /*
 /*****************************************************************************/
 
-.ServiceText {
+.service_text {
 	word-wrap: break-word;
 }
 
