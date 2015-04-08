@@ -1,10 +1,10 @@
 # CouchSurfing-Services
 ### By Aleksey Chebotarev
 
-Preliminary implementation of a static [Jekyll][jekyll] site for monitoring the status of services offered by [CouchSurfing][couchsurfing] 
+Preliminary implementation of a static [Jekyll][jekyll] site for monitoring the status of services offered by [CouchSurfing][couchsurfing]. It is hosted live on Github pages: [CouchSurfing Services][hosted]
 
 
-## Basic File Organization: 
+### Basic File Organization: 
 
 Each of the pages in the site has a layout of "default" which sets up the header and footer of the site.
 This layout file is described by /_layouts/default.html
